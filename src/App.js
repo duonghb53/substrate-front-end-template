@@ -15,6 +15,7 @@ import NodeInfo from './NodeInfo';
 import TemplateModule from './TemplateModule';
 import Transfer from './Transfer';
 import Upgrade from './Upgrade';
+import ProofOfExistence from './ProofOfExistence';
 
 function Main () {
   const [accountAddress, setAccountAddress] = useState(null);
@@ -72,8 +73,13 @@ function Main () {
             <Interactor accountPair={accountPair} />
             <Events />
           </Grid.Row>
+
           <Grid.Row>
             <TemplateModule accountPair={accountPair} />
+          </Grid.Row>
+
+          <Grid.Row>
+            <ProofOfExistence accountPair={accountPair} />
           </Grid.Row>
         </Grid>
       </Container>

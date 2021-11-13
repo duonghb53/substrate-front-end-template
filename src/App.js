@@ -73,14 +73,15 @@ function Main () {
             <Interactor accountPair={accountPair} />
             <Events />
           </Grid.Row>
+          
+          <Grid.Row>
+            <ProofOfExistence accountPair={accountPair} />
+          </Grid.Row>
 
           <Grid.Row>
             <TemplateModule accountPair={accountPair} />
           </Grid.Row>
 
-          <Grid.Row>
-            <ProofOfExistence accountPair={accountPair} />
-          </Grid.Row>
         </Grid>
       </Container>
       <DeveloperConsole />

@@ -16,8 +16,9 @@ import TemplateModule from './TemplateModule';
 import Transfer from './Transfer';
 import Upgrade from './Upgrade';
 import ProofOfExistence from './ProofOfExistence';
+import Kitties from './Kitties';
 
-function Main () {
+function Main() {
   const [accountAddress, setAccountAddress] = useState(null);
   const { apiState, keyring, keyringState, apiError } = useSubstrate();
   const accountPair =
@@ -73,13 +74,17 @@ function Main () {
             <Interactor accountPair={accountPair} />
             <Events />
           </Grid.Row>
-          
+
           <Grid.Row>
             <ProofOfExistence accountPair={accountPair} />
           </Grid.Row>
 
           <Grid.Row>
             <TemplateModule accountPair={accountPair} />
+          </Grid.Row>
+
+          <Grid.Row>
+            <Kitties accountPair={accountPair} />
           </Grid.Row>
 
         </Grid>
@@ -89,7 +94,7 @@ function Main () {
   );
 }
 
-export default function App () {
+export default function App() {
   return (
     <SubstrateContextProvider>
       <Main />
